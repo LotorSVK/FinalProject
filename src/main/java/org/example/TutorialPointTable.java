@@ -1,5 +1,6 @@
 package org.example;
 
+import io.cucumber.java.After;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -16,6 +17,12 @@ public class TutorialPointTable {
     public void setUp(){
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
+    }
+
+    @After
+    public void cleanUp(){
+        driver.close();
+        driver.quit();
     }
 
     @Test
