@@ -38,6 +38,7 @@ public class TutorialPointTable {
         String salary = driver.findElement(By.xpath("/html/body/main/div/div/div[2]/form/div[2]/table/tbody/tr[2]/td[5]")).getText();
         String department = driver.findElement(By.xpath("/html/body/main/div/div/div[2]/form/div[2]/table/tbody/tr[2]/td[6]")).getText();
 
+
         assertEquals("Alden", name);
         assertEquals("Cantrell",lastName);
         assertEquals("45",age);
